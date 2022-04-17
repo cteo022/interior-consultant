@@ -1,0 +1,292 @@
+/* remove all padding and button style */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  /* General */
+
+  html, body {
+    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+  }
+
+  body{
+    position: relative;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px 100px 0 100px;
+  }
+
+  a, h4, h5, button, p.descrip-text, footer{
+    font-family: 'Montserrat';
+  }
+
+  a, h6, button, .username{
+    font-weight: 700;
+  }
+
+  .active{
+    visibility: visible;
+  }
+
+  /* header */
+  header{
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1{
+    font-family: 'Crimson Pro';
+    font-weight: 200;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+    padding: 8px;
+  }
+
+  a{
+    font-size: 18px;
+    padding-left: 100px;
+    font-weight: 500;
+  }
+
+  a.main-pg{
+    border-bottom: 1px solid #ffffff;
+    padding-left: 0;
+  }
+
+  .no-show{
+    visibility: hidden;
+  }
+
+  .active{
+    visibility: visible;
+  }
+
+  /* .temp{
+    visibility: hidden;
+  } */
+
+  .hamburger, .close-btn{
+    position: absolute;
+    font-size: 2rem;
+    right: 2.5%;
+  }
+
+  .close-btn{
+    margin: 0.5rem 3rem;
+    top: 0;
+    right: 0;
+  }
+
+  .sidebar > a{
+    padding-top: 0.8rem;
+    padding-left: 0;
+  }
+
+  .sidebar{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    z-index: 2;
+  }
+
+
+  /* main content */
+  main{
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    padding: 150px 0 200px 0;
+  }
+
+  h3{
+    font-family: 'Lora';
+    font-size: 48px;
+    padding-bottom: 40px;
+    font-weight: 500;
+  }
+
+  h4{
+    font-size: 14px;
+  }
+
+  h5{
+    font-size: 12px;
+    color: #828282;
+    font-weight: 500;
+  }
+
+  h6{
+    font-family: 'Lora';
+    font-size: 24px;
+  }
+
+  button{
+    font-size: 18px;
+  }
+
+  .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    float: left;
+  }
+
+  p.descrip-text{
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 50px;
+  }
+
+  .profile{
+    position: relative;
+  }
+
+  .main-img{
+    width: 100%;
+    float: right;
+    padding-left: 20%;
+    padding-right: 40px;
+  }
+
+  img.profile-img{
+    width: 100%;
+  }
+
+  .designer-profile{
+    background-color: #000000;
+    position: absolute;
+    padding: 20px 20px 20px 20px;
+    width: 40%;
+    z-index: 1;
+    margin: 50% 0 0 50%;
+  }
+
+  img.designer-img{
+    border-radius: 50%;
+    width: 60px;
+  }
+
+ .top-container{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   padding-bottom: 20px;
+ }
+
+ .right-name{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   padding-left: 20px;
+ }
+
+ .bottom-container{
+   width: 70%;
+ }
+
+  /* footer */
+  footer {
+    padding-bottom: 4%;
+    text-align: center;
+    color: #BDBDBD;
+    font-size: 14px;
+  }
+
+  /* Ipad view */
+  @media (max-width:1250px) {
+    .description{
+      width: 70%;
+    }
+    .main-img{
+      width: 80%;
+    }
+    .designer-profile{
+      margin: 40% 0 0 50%;
+    }
+
+    h6, p.descrip-text{
+      font-size: 20px;
+    }
+
+    h3{
+      font-size: 38px;
+    }
+
+    button{
+      font-size: 14px;
+    }
+    .main-img{
+      padding-left: 0;
+    }
+  }
+
+  /* Phone view */
+
+  @media (max-width:970px) {
+    body{
+      padding: 2rem 1rem 0 1rem;
+    }
+
+    main{
+      display: flex;
+      flex-direction: column;
+      padding-top: 5rem;
+    }
+
+    .main-img{
+      margin-top: 3rem;
+      width: 100%;
+      padding: 0;
+    }
+
+    .designer-profile{
+      margin: 70% 0 0 55%;
+    }
+
+    .navbar > a{
+      padding: 0;
+      font-size: 1px;
+      visibility: hidden;
+    }
+    
+    .hamburger{
+      visibility: visible;
+    }
+
+  }
+  
